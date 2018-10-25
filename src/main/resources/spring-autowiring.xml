@@ -3,12 +3,14 @@
        xmlns="http://www.springframework.org/schema/beans"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans.xsd"
-       default-autowire="byName">
+       default-autowire="constructor">
 
     <bean id="autoWiringService" class="com.imooc.autowiring.AutoWiringService">
         <!--<property name="autoWiringDAO" ref="autoWiringDAO"></property>-->
     </bean>
 
     <bean id="autoWiringDAO" class="com.imooc.autowiring.AutoWiringDAO"></bean>
+    <!--<bean id="autoWiringDAO111" class="com.imooc.autowiring.AutoWiringDAO"></bean>-->
+    <!--byType与BeanID-->
 
 </beans>
