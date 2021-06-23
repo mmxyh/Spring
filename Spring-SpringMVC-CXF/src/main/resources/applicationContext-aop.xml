@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd ">
+
+    <!--1.代理方式设置为 cglib，默认false，则必须通过实现某个接口才能实现增强 -->
+    <aop:aspectj-autoproxy proxy-target-class="true"/>
+
+    <!--2.配置文件中把须增强注解所在包扫描注入，或者配置 bean-->
+    <context:component-scan base-package="com.aspect"/>
+
+
+</beans>
